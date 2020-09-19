@@ -1,0 +1,2 @@
+# gss
+Software Gestiune
