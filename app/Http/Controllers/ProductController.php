@@ -52,4 +52,13 @@ class ProductController extends Controller
 
         return back();
     }
+
+    public function show($id) {
+        $product = Product::where('id','=',$id)->firstOrFail();
+
+        return view('products.single',compact('product'));
+    }
+
+
+
 }

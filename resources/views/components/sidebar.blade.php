@@ -12,13 +12,13 @@
     </div>
     <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
-            <li class="{{Request::is('home') ? 'active' : ''}}">
+            <li class = "{{Request::is('home') ? 'active' : ''}} ">
                 <a href="{{route('home')}}">
                     <i class="now-ui-icons design_app"></i>
                     <p>Dashboard</p>
                 </a>
             </li>
-            <li>
+            <li class = "{{Request::is('products') ? 'active' : ''}} " >
                 <a href="{{route('products')}}">
                     <i class="now-ui-icons education_atom"></i>
                     <p>Produse</p>

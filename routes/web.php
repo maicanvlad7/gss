@@ -23,5 +23,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['prefix' => 'products'], function() {
     Route::get('/',[App\Http\Controllers\ProductController::class, 'index'])->name('products');
     Route::post('/',[App\Http\Controllers\ProductController::class, 'store'])->name('add_product');
+    Route::get('/{id}',[App\Http\Controllers\ProductController::class, 'show'])->name('edit_product');
     Route::delete('/{id_prod}',[App\Http\Controllers\ProductController::class, 'delete'])->name('delete_product');
+
 });

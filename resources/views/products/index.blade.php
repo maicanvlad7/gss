@@ -80,11 +80,20 @@
                                 <td>{{$prod->price}}</td>
                                 <td>{{$prod->price * $prod->quantity . ' lei'}}</td>
                                 <td>
-                                    <form action="{{route('delete_product',['id_prod' => $prod->id])}}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button class="btn btn-danger" type="submit" title="Sterge"><i class="now-ui-icons ui-1_simple-remove"></i></button>
-                                    </form>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <form action="{{route('delete_product',['id_prod' => $prod->id])}}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-danger" type="submit" title="Sterge"><i class="now-ui-icons ui-1_simple-remove"></i></button>
+                                            </form>
+                                        </div>
+                                        <div class="col-2">
+                                            <a class="btn btn-info" title="Editeaza" href="{{route('edit_product',['id'=>$prod->id])}}">
+                                                <i class="now-ui-icons ui-2_settings-90"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                             @endforeach
